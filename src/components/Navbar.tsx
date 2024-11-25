@@ -1,29 +1,20 @@
 import React from 'react';
-import { ShoppingCart, Menu, Leaf } from 'lucide-react';
+const wildGrowthOilsLogo12 = require("../assets/images/wildGrowthOilsLogo.png");
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar-container">
         <a href="#" className="navbar-brand">
-          <Leaf size={32} color="#059669" />
+          <img src={wildGrowthOilsLogo12} alt="Logo" style={{ width: '12%', height: 'auto',alignItems: 'center'}}/>
           <span>WildGrowthOils</span>
         </a>
         
         <div className="navbar-menu">
           <a href="#home">Home</a>
-          <a href="#products">Products</a>
+          <a href="#products">Product</a>
           <a href="#about">About</a>
           <a href="#testimonials">Testimonials</a>
-        </div>
-
-        <div className="navbar-actions">
-          <button>
-            <ShoppingCart size={24} />
-          </button>
-          <button className="menu-button">
-            <Menu size={24} />
-          </button>
         </div>
       </div>
     </nav>
