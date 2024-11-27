@@ -1,12 +1,12 @@
 import React from 'react';
-const wildGrowthOilsLogo12 = require("../assets/images/wildGrowthOilsLogo.png");
+const wildGrowthOilsLogo = require("../assets/images/wildGrowthOilsLogo.png");
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar-container">
         <a href="#" className="navbar-brand">
-          <img src={wildGrowthOilsLogo12} alt="Logo" style={{ width: '12%', height: 'auto',alignItems: 'center'}}/>
+          <img src={wildGrowthOilsLogo} alt="Logo" style={{ width: '12%', height: 'auto',alignItems: 'center'}}/>
           <span>WildGrowthOils</span>
         </a>
         

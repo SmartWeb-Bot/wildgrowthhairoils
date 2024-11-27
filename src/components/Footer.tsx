@@ -1,5 +1,6 @@
 import React from 'react';
 import { Leaf, Instagram, Facebook, Twitter } from 'lucide-react';
+const wildGrowthOilsLogo12 = require("../assets/images/wildGrowthOilsLogo.png");
 
 export default function Footer() {
   return (
@@ -8,8 +9,9 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand-section">
             <div className="footer-brand">
-              <Leaf size={32} color="#059669" />
-              <span>WildGrowthHair</span>
+              {/* <Leaf size={32} color="#059669" /> */}
+              <img src={wildGrowthOilsLogo12} alt="Logo" style={{ width: '15%', height: 'auto',alignItems: 'center'}}/>
+              <span>WildGrowthOils</span>
             </div>
             <p className="footer-description">
               Empowering natural beauty through the power of organic hair care solutions.
