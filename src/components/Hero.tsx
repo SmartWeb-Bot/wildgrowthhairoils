@@ -5,7 +5,9 @@ import 'react-slideshow-image/dist/styles.css';
 const image1=require('../assets/images/wildGrowthOilsFrontImage1.png');
 const image2=require('../assets/images/wildGrowthOilsFrontImage2.png');
 const image3=require('../assets/images/wildGrowthOilsFrontImage3.png');
-
+const image4=require('../assets/images/wildGrowthOilsFrontImage4.png');
+const image5=require('../assets/images/wildGrowthOilsFrontImage5.png');
+const image6=require('../assets/images/wildGrowthOilsFrontImage6.png');
 
 export default function Hero() {
 
@@ -31,15 +33,30 @@ export default function Hero() {
             <div style={{ 'backgroundImage': `url(${image3})` }}>
             </div>
           </div>
+          <div className={`each-slide-effect ${currentSlide === 3 ? 'active' : ''}`}>
+            <div style={{ 'backgroundImage': `url(${image4})` }}>
+            </div>
+          </div>
+          <div className={`each-slide-effect ${currentSlide === 4 ? 'active' : ''}`}>
+            <div style={{ 'backgroundImage': `url(${image5})` }}>
+            </div>
+          </div>
+          <div className={`each-slide-effect ${currentSlide === 5 ? 'active' : ''}`}>
+            <div style={{ 'backgroundImage': `url(${image5})` }}>
+            </div>
+          </div>
         </Slide>
         <div className="dots-container">
           <div className={`dot ${currentSlide === 0 ? 'active' : ''}`}></div>
           <div className={`dot ${currentSlide === 1 ? 'active' : ''}`}></div>
           <div className={`dot ${currentSlide === 2 ? 'active' : ''}`}></div>
+          <div className={`dot ${currentSlide === 3 ? 'active' : ''}`}></div>
+          <div className={`dot ${currentSlide === 4 ? 'active' : ''}`}></div>
+          <div className={`dot ${currentSlide === 5 ? 'active' : ''}`}></div>
         </div>
       </div>
 
-      <div className="container">
+      {/* <div className="container">
         <div className="hero-content">
           <h1 className="hero-title">
             Nurture Your Natural Beauty
@@ -49,7 +66,7 @@ export default function Hero() {
           </p>
           
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

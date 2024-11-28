@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container navbar-container">
         <a href="#" className="navbar-brand">
-          <img src={wildGrowthOilsLogo} alt="Logo" style={{ width: '12%', height: 'auto',alignItems: 'center'}}/>
+          <img src={wildGrowthOilsLogo} alt="Logo" style={{ width: '12%', height: 'auto',alignItems: 'center'}} />
           <span>WildGrowthOils</span>
         </a>
         
@@ -15,6 +15,7 @@ export default function Navbar() {
           <a href="#products">Product</a>
           <a href="#about">About</a>
           <a href="#testimonials">Testimonials</a>
+          <a href="#FAQ">FAQ</a>
         </div>
       </div>
     </nav>
