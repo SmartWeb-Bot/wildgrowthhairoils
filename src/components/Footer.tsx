@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-brand-section">
             <div className="footer-brand">
               {/* <Leaf size={32} color="#059669" /> */}
-              <img src={wildGrowthOilsLogo12} alt="Logo" style={{ width: '15%', height: 'auto',alignItems: 'center'}}/>
+              <img src={wildGrowthOilsLogo12} alt="Logo" style={{ width: '15%', height: 'auto', alignItems: 'center' }} />
               <span>WildGrowthOils</span>
             </div>
             <p className="footer-description">
@@ -26,10 +26,11 @@ export default function Footer() {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul className="footer-links">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#products">Products</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#products">Product</a></li>
+              <li><a href="#about">About</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#FAQ">FAQ</a></li>
             </ul>
           </div>
 
@@ -45,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} WildGrowthHair. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} WildGrowthOils. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -2,12 +2,12 @@ import React,{useState} from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-const image1=require('../assets/images/wildGrowthOilsFrontImage1.png');
-const image2=require('../assets/images/wildGrowthOilsFrontImage2.png');
-const image3=require('../assets/images/wildGrowthOilsFrontImage3.png');
-const image4=require('../assets/images/wildGrowthOilsFrontImage4.png');
-const image5=require('../assets/images/wildGrowthOilsFrontImage5.png');
-const image6=require('../assets/images/wildGrowthOilsFrontImage6.png');
+const image1=require('../assets/images/Heros/wildGrowthOilsFrontImage1.png');
+const image2=require('../assets/images/Heros/wildGrowthOilsFrontImage2.png');
+const image3=require('../assets/images/Heros/wildGrowthOilsFrontImage3.png');
+const image4=require('../assets/images/Heros/wildGrowthOilsFrontImage4.png');
+const image5=require('../assets/images/Heros/wildGrowthOilsFrontImage5.png');
+const image6=require('../assets/images/Heros/wildGrowthOilsFrontImage6.png');
 
 export default function Hero() {
 
