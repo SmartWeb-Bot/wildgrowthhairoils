@@ -12,8 +12,8 @@ export default function Navbar() {
         
         <div className="navbar-menu">
           <a href="#home">Home</a>
-          <a href="#products">Product</a>
           <a href="#about">About</a>
+          <a href="#products">Product</a>
           <a href="#testimonials">Testimonials</a>
           <a href="#FAQ">FAQ</a>
         </div>

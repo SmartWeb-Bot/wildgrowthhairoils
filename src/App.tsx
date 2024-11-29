@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Products from './components/Products';
-import ProductDetails from './components/ProductDetails';
+import ProductDetails from './components/ProductDetails/index';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
@@ -12,8 +12,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Products />
         <ProductDetails />
+        <Products />
         <Testimonials />
       </main>
       <Footer />
