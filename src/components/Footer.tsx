@@ -18,8 +18,6 @@ export default function Footer() {
             </p>
             <div className="social-links">
               <a href="#"><Instagram size={24} /></a>
-              <a href="#"><Facebook size={24} /></a>
-              <a href="#"><Twitter size={24} /></a>
             </div>
           </div>
 
@@ -27,10 +25,11 @@ export default function Footer() {
             <h3>Quick Links</h3>
             <ul className="footer-links">
               <li><a href="#home">Home</a></li>
-              <li><a href="#products">Product</a></li>
               <li><a href="#about">About</a></li>
+              <li><a href="#products">Product</a></li>
+              <li><a href="#faq">FAQ</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#FAQ">FAQ</a></li>
+              
             </ul>
           </div>
 
