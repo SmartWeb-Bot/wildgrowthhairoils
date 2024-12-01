@@ -42,7 +42,7 @@ export default function Hero() {
             </div>
           </div>
           <div className={`each-slide-effect ${currentSlide === 5 ? 'active' : ''}`}>
-            <div style={{ 'backgroundImage': `url(${image5})` }}>
+            <div style={{ 'backgroundImage': `url(${image6})` }}>
             </div>
           </div>
         </Slide>

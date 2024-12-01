@@ -14,8 +14,8 @@ export default function Navbar() {
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#products">Product</a>
+          <a href="#faq">FAQ</a>
           <a href="#testimonials">Testimonials</a>
-          <a href="#FAQ">FAQ</a>
         </div>
       </div>
     </nav>
