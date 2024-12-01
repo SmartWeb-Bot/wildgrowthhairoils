@@ -6,19 +6,9 @@ const wildGrowthOilsLogo = require("../assets/images/wildGrowthOilsLogo.png");
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      if (window.innerWidth <= 768) {
-        setIsMobileMenuOpen(true);
-      }
-    }
-    // Cleanup
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   const handleMenuToggle = (event: React.MouseEvent) => {
     event.stopPropagation();
-    setIsMobileMenuOpen(true);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   
   return (
@@ -42,6 +32,7 @@ export default function Navbar() {
             <button
               className="menu-button"
               onClick={handleMenuToggle}
+              aria-label="Toggle menu"
             >
               <Menu size={24} />
             </button>

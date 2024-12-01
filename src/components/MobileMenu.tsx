@@ -16,14 +16,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = '';
+    };
   }, [isOpen, onClose]);
 
   return (
     <div className={`mobile-menu ${isOpen ? 'active' : ''}`} ref={menuRef}>
       <div className="mobile-menu-header">
-        <button className="close-button" onClick={onClose}>
+        <button className="close-button" onClick={onClose} aria-label="Close menu">
           <X size={24} />
         </button>
       </div>
