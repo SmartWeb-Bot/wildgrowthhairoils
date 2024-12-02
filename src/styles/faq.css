@@ -1,6 +1,6 @@
 .faq {
     padding: 5rem 0;
-    background-color: var(--color-gray-50);
+    background-color: color-mix(in sRGB, var(--color-gray-50) 70%, black 1.7%);
   }
   
   .faq-container {
