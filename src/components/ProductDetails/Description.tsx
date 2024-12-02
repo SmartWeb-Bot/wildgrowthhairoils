@@ -1,10 +1,10 @@
 import React from 'react';
-
+const hair_growthImage:any=require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/about/HAIR GROWTH.png');
 export const Description = () => (
   <div className="description-content">
     <div className="description-image">
       <img 
-        src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80"
+        src={hair_growthImage}
         alt="WildGrowthHair Oil"
       />
     </div>
@@ -18,10 +18,6 @@ export const Description = () => (
         <div className="feature">
           <span className="feature-highlight">100% Natural</span>
           <p>Pure botanical ingredients with no harmful chemicals</p>
-        </div>
-        <div className="feature">
-          <span className="feature-highlight">Scientifically Proven</span>
-          <p>Clinically tested formula for optimal results</p>
         </div>
         <div className="feature">
           <span className="feature-highlight">Suitable for All Hair Types</span>
