@@ -45,10 +45,10 @@ export default function Products() {
                     loading="lazy"
                   />
                 </picture>
-                <button className="prev-button" onClick={handlePrevImage}>
+                <button className="slider-arrow slider-arrow-left" onClick={handlePrevImage}>
                     <ChevronLeft size={24} />
                 </button>
-                <button className="next-button" onClick={handleNextImage}>
+                <button className="slider-arrow slider-arrow-right" onClick={handleNextImage}>
                     <ChevronRight size={24} />
                 </button>
               </div>
@@ -56,10 +56,6 @@ export default function Products() {
             <div className="product-content">
               <div className="product-header">
                 <h3 className="product-title">{productMock.name}</h3>
-                <div className="product-rating">
-                  <Star size={20} fill="currentColor" />
-                  <span>{productMock.rating}</span>
-                </div>
               </div>
               <p className="product-description">{productMock.description}</p>
             </div>
