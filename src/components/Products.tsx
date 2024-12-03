@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { productMock } from '../mocks/products';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Products() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productMock.images.length);
+  };
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + productMock.images.length) % productMock.images.length
+    );
+  };
+
   return (
     <section className="products" id="products">
       <div className="container">
@@ -16,15 +29,29 @@ export default function Products() {
         <div className="products-grid">
           <div className={`product-card ${productMock.size}`}>
             <div className="product-image">
-              <picture>
-                <source media="(min-width: 1024px)" srcSet={productMock.images.large} />
-                <source media="(min-width: 768px)" srcSet={productMock.images.medium} />
-                <img 
-                  src={productMock.images.small} 
-                  alt={productMock.name}
-                  loading="lazy"
-                />
-              </picture>
+              <div className="image-slider">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcSet={productMock.images[currentImageIndex].large}
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet={productMock.images[currentImageIndex].medium}
+                  />
+                  <img
+                    src={productMock.images[currentImageIndex].small}
+                    alt={productMock.name}
+                    loading="lazy"
+                  />
+                </picture>
+                <button className="prev-button" onClick={handlePrevImage}>
+                    <ChevronLeft size={24} />
+                </button>
+                <button className="next-button" onClick={handleNextImage}>
+                    <ChevronRight size={24} />
+                </button>
+              </div>
             </div>
             <div className="product-content">
               <div className="product-header">
