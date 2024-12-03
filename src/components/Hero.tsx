@@ -1,17 +1,40 @@
-import React,{useState} from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-const image1=require('../assets/images/Heros/wildGrowthOilsFrontImage1.png');
-const image2=require('../assets/images/Heros/wildGrowthOilsFrontImage2.png');
-const image3=require('../assets/images/Heros/wildGrowthOilsFrontImage3.png');
-const image4=require('../assets/images/Heros/wildGrowthOilsFrontImage4.png');
-const image5=require('../assets/images/Heros/wildGrowthOilsFrontImage5.png');
-const image6=require('../assets/images/Heros/wildGrowthOilsFrontImage6.png');
+
+const desktopImages = [
+  require('../assets/images/Heros/desktop/wildGrowthOilsFrontImage1.png'),
+  require('../assets/images/Heros/desktop/wildGrowthOilsFrontImage2.png'),
+  require('../assets/images/Heros/desktop/wildGrowthOilsFrontImage3.png'),
+  require('../assets/images/Heros/desktop/wildGrowthOilsFrontImage4.png'),
+  require('../assets/images/Heros/desktop/wildGrowthOilsFrontImage5.png'),
+  require('../assets/images/Heros/desktop/wildGrowthOilsFrontImage6.png'),
+];
+
+const mobileImages = [
+  require('../assets/images/Heros/mobile/wildGrowthOilsMobile1.png'),
+  require('../assets/images/Heros/mobile/wildGrowthOilsMobile2.png'),
+  require('../assets/images/Heros/mobile/wildGrowthOilsMobile3.png'),
+  require('../assets/images/Heros/mobile/wildGrowthOilsMobile4.png'),
+  require('../assets/images/Heros/mobile/wildGrowthOilsMobile5.png'),
+  require('../assets/images/Heros/mobile/wildGrowthOilsMobile6.png'),
+];
 
 export default function Hero() {
-
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [images, setImages] = useState(desktopImages);
+
+  useEffect(() => {
+    const updateImages = () => {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      setImages(isMobile ? mobileImages : desktopImages);
+    };
+
+    updateImages(); // Initial check
+    window.addEventListener('resize', updateImages); // Listen for screen size changes
+
+    return () => window.removeEventListener('resize', updateImages); // Cleanup on unmount
+  }, []);
 
   const handleSlideChange = (index: number) => {
     setCurrentSlide(index);
@@ -19,54 +42,26 @@ export default function Hero() {
 
   return (
     <section className="hero" id="home">
-     <div className="hero-bg">
-        <Slide arrows={false}  onChange={handleSlideChange}>
-          <div className={`each-slide-effect ${currentSlide === 0 ? 'active' : ''}`}>
-            <div style={{ 'backgroundImage': `url(${image1})` }}>
+      <div className="hero-bg">
+        <Slide arrows={false} onChange={handleSlideChange}>
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`each-slide-effect ${currentSlide === index ? 'active' : ''}`}
+            >
+              <div style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-          </div>
-          <div className={`each-slide-effect ${currentSlide === 1 ? 'active' : ''}`}>
-            <div style={{ 'backgroundImage': `url(${image2})` }}>
-            </div>
-          </div>
-          <div className={`each-slide-effect ${currentSlide === 2 ? 'active' : ''}`}>
-            <div style={{ 'backgroundImage': `url(${image3})` }}>
-            </div>
-          </div>
-          <div className={`each-slide-effect ${currentSlide === 3 ? 'active' : ''}`}>
-            <div style={{ 'backgroundImage': `url(${image4})` }}>
-            </div>
-          </div>
-          <div className={`each-slide-effect ${currentSlide === 4 ? 'active' : ''}`}>
-            <div style={{ 'backgroundImage': `url(${image5})` }}>
-            </div>
-          </div>
-          <div className={`each-slide-effect ${currentSlide === 5 ? 'active' : ''}`}>
-            <div style={{ 'backgroundImage': `url(${image6})` }}>
-            </div>
-          </div>
+          ))}
         </Slide>
         <div className="dots-container">
-          <div className={`dot ${currentSlide === 0 ? 'active' : ''}`}></div>
-          <div className={`dot ${currentSlide === 1 ? 'active' : ''}`}></div>
-          <div className={`dot ${currentSlide === 2 ? 'active' : ''}`}></div>
-          <div className={`dot ${currentSlide === 3 ? 'active' : ''}`}></div>
-          <div className={`dot ${currentSlide === 4 ? 'active' : ''}`}></div>
-          <div className={`dot ${currentSlide === 5 ? 'active' : ''}`}></div>
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`dot ${currentSlide === index ? 'active' : ''}`}
+            ></div>
+          ))}
         </div>
       </div>
-
-      {/* <div className="container">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Nurture Your Natural Beauty
-          </h1>
-          <p className="hero-description">
-            Experience the power of nature with our premium hair oils, crafted to enhance your hair's natural growth and vitality.
-          </p>
-          
-        </div>
-      </div> */}
     </section>
   );
 }
