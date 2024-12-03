@@ -13,7 +13,7 @@ export interface Product {
   
   export const productMock: Product = {
     id: 1,
-    name: "Growth Elixir",
+    name: "Wild Growth Oil",
     description: "Premium blend of natural oils for maximum hair growth",
     rating: 5,
     images:[ {
@@ -25,6 +25,21 @@ export interface Product {
       small: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/HAIR GROWTH.png'),
       medium: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/HAIR GROWTH.png'),
       large: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/HAIR GROWTH.png')
+    },
+    {
+      small: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/HAIR GROWTH.png'),
+      medium: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/HAIR GROWTH.png'),
+      large: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/HAIR GROWTH.png')
+    },
+    {
+      small: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/How To Use.png'),
+      medium: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/How To Use.png'),
+      large: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/How To Use.png')
+    },
+    {
+      small: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/Ingredients mocks.png'),
+      medium: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/Ingredients mocks.png'),
+      large: require('C:/FinalWebsites/wildgrowthhairoils/src/assets/images/products/Ingredients mocks.png')
     },
   ],
     size: "large"
